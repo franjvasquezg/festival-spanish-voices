@@ -1,0 +1,45 @@
+Source: festival-spanish-voices
+Section: sound
+Priority: optional
+Maintainer: Equipo de Desarrollo de Canaima GNU/Linux <desarrolladores@canaima.softwarelibre.gob.ve>
+Uploaders: Francisco Javier Vásquez Guerrero <franjvasquezg@gmail.com>
+Build-Depends: debhelper (>= 5)
+Standards-Version: 3.7.2
+
+Package: festvox-palpc16k
+Architecture: all
+Depends: festival (>= 1.4.3-9)
+Description: Male Spanish voice for Festival
+ This is a diphone-based male Spanish voice for the Festival speech
+ synthesis system. These original audio files were recorded by a professional
+ voice talent  in a recording studio. 
+ .
+ This voice was developed by the Consejeria de Innovacion, Ciencia y Empresa
+ of the Junta de Andalucia on a project awarded to MP Sistemas in
+ collaboration with Intelligent Dialogue Systems (INDISYS).
+ .
+ The primary objective was to integrate a higher-quality diphone-based
+ Spanish voice in Guadalinex v4.0,
+ an Ubuntu-based Linux distribution promoted by the Government of Andalusia
+ (Spain).
+ See http://www.guadalinex.org for more information.
+
+
+Package: festvox-sflpc16k
+Architecture: all
+Depends: festival (>= 1.4.3-9)
+Description: Female spanish voice for Festival
+ This is a diphone-based male Spanish voice for the Festival speech
+ synthesis system. These original audio files were recorded by a professional
+ voice talent  in a recording studio.      
+ .
+ This voice was developed by the Consejeria de Innovacion, Ciencia y Empresa
+ of the Junta de Andalucia on a project awarded to MP Sistemas in
+ collaboration with Intelligent Dialogue Systems (INDISYS).
+ .
+ The primary objective was to integrate a higher-quality diphone-based
+ Spanish voice in Guadalinex v4.0,
+ an Ubuntu-based Linux distribution promoted by the Government of Andalusia
+ (Spain).
+ See http://www.guadalinex.org for more information.
+
