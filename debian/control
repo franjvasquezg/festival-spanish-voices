@@ -2,7 +2,7 @@ Source: festival-spanish-voices
 Section: sound
 Priority: optional
 Maintainer: Equipo de Desarrollo de Canaima GNU/Linux <desarrolladores@canaima.softwarelibre.gob.ve>
-Uploaders: Francisco Javier Vásquez Guerrero <franjvasquezg@gmail.com>
+Uploaders: Francisco Javier Vásquez Guerrero <franjvasquezg@gmail.com>, Jose Francisco Guerrero Rangel <jsfrncscg@gmail.com>
 Build-Depends: debhelper (>= 5)
 Standards-Version: 3.7.2
 
