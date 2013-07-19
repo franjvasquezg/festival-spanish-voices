@@ -3,8 +3,8 @@ Section: sound
 Priority: optional
 Maintainer: Equipo de Desarrollo de Canaima GNU/Linux <desarrolladores@canaima.softwarelibre.gob.ve>
 Uploaders: Francisco Javier Vásquez Guerrero <franjvasquezg@gmail.com>
-Build-Depends: debhelper (>= 5)
-Standards-Version: 3.7.2
+Build-Depends: debhelper (>= 9)
+Standards-Version: 3.9.4
 
 Package: festvox-palpc16k
 Architecture: all
