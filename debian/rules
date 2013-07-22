@@ -85,11 +85,14 @@ install-indep:
 	install -d $(CURDIR)/debian/festvox-sflpc16k/usr/local/bin
 	install -d $(CURDIR)/debian/festvox-sflpc16k/lib/systemd/system
 	install -d $(CURDIR)/debian/festvox-sflpc16k/usr/share/festival/voices/spanish/JuntaDeAndalucia_es_sf_diphone/spdconf
+	install -d $(CURDIR)/debian/festvox-sflpc16k/usr/share/festival/voices/spanish/JuntaDeAndalucia_es_sf_diphone/config
 	
 
 	install -m644 $(CURDIR)/config/server/festival.sh $(CURDIR)/debian/festvox-sflpc16k/usr/local/bin
 	install -m644 $(CURDIR)/config/server/festival.service $(CURDIR)/debian/festvox-sflpc16k/lib/systemd/system
 	install -m644 $(CURDIR)/config/speechd/speechd.conf $(CURDIR)/debian/festvox-sflpc16k/usr/share/festival/voices/spanish/JuntaDeAndalucia_es_sf_diphone/spdconf
+	install -m644 $(CURDIR)/config/festival.scm.canaima $(CURDIR)/debian/festvox-sflpc16k/usr/share/festival/voices/spanish/JuntaDeAndalucia_es_sf_diphone/config
+	install -m644 $(CURDIR)/config/speech-dispatcher.canaima $(CURDIR)/debian/festvox-sflpc16k/usr/share/festival/voices/spanish/JuntaDeAndalucia_es_sf_diphone/config
 	
 	dh_install -i
 
