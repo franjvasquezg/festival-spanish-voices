@@ -82,13 +82,13 @@ install-indep:
 	install -m644 $(CURDIR)/JuntaDeAndalucia_es_sf_diphone/group/* $(CURDIR)/debian/festvox-sflpc16k/usr/share/festival/voices/spanish/JuntaDeAndalucia_es_sf_diphone/group
 
 	#SERVER FESTIVAL AND CONFIG SPD-CONF-GLOBAL
-	install -d $(CURDIR)/debian/festvox-sflpc16k/usr/local/bin/
-	install -d $(CURDIR)/debian/festvox-sflpc16k/lib/systemd/system/
+	install -d $(CURDIR)/debian/festvox-sflpc16k/usr/local/bin
+	install -d $(CURDIR)/debian/festvox-sflpc16k/lib/systemd/system
 	install -d $(CURDIR)/debian/festvox-sflpc16k/usr/share/festival/voices/spanish/JuntaDeAndalucia_es_pa_diphone/spdconf
 	
 
-	install -m644 $(CURDIR)/config/server/festival.sh $(CURDIR)/debian/festvox-palpc16k/usr/local/bin/
-	install -m644 $(CURDIR)/config/server/festival.service $(CURDIR)/debian/festvox-palpc16k/lib/systemd/system/
+	install -m644 $(CURDIR)/config/server/festival.sh $(CURDIR)/debian/festvox-palpc16k/usr/local/bin
+	install -m644 $(CURDIR)/config/server/festival.service $(CURDIR)/debian/festvox-palpc16k/lib/systemd/system
 	install -m644 $(CURDIR)/config/speechd/speechd.conf $(CURDIR)/debian/festvox-sflpc16k/usr/share/festival/voices/spanish/JuntaDeAndalucia_es_pa_diphone/spdconf
 	
 	dh_install -i

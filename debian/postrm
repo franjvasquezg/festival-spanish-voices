@@ -38,6 +38,11 @@ rm /lib/systemd/system/festival.service
 rm /usr/local/bin/festival.sh
 rm -rf /usr/share/festival/voices/spanish/*
 
+#Borramos el ALTERNATIVE
+
+update-alternatives --remove speech-dispatcher /etc/speech-dispatcherusr/speechd.conf
+
+
 #DEBHELPER#
 
 exit 0
