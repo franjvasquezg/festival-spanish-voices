@@ -1,3 +1,12 @@
+festival-spanish-voices (1.0.0Canaima1+3) unstable; urgency=low
+
+  [ Francisco Javier Vásquez Guerrero ]
+  * [1ee9bea] opción para ejecutar activar los postinstal y postrm
+
+  [ francisco vasquez ]
+
+ -- Francisco Javier Vásquez Guerrero <franjvasquezg@gmail.com>  Mon, 22 Jul 2013 16:30:48 -0430
+
 festival-spanish-voices (1.0.0Canaima1+2) unstable; urgency=low
 
   [ Francisco Javier Vásquez Guerrero ]
