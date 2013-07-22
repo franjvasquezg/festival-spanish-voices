@@ -1,3 +1,22 @@
+festival-spanish-voices (1.0.0Canaima1) unstable; urgency=low
+
+  [ franjvasquezg ]
+  * [5b168ba] Initial commit
+
+  [ Jose Guerrero ]
+  * [b9ce024] agregando archivo de configuración de spd-conf global
+  * [3eb4adc] ignorando archivos de eclipse
+  * [4a5bc0a] removemos  .pydevproject .project
+
+  [ Francisco Javier Vásquez Guerrero ]
+  * [8672b38] archivos configuración para la voz de silvia
+  * [4ac3dbb] archivo TODO para recordar estudiar soporte a las canaimitas
+  * [7160d18] cambiando prioridad del paquete
+
+  [ francisco vasquez ]
+
+ -- Francisco Javier Vásquez Guerrero <franjvasquezg@gmail.com>  Mon, 22 Jul 2013 09:42:25 -0430
+
 festival-spanish-voices (1.0.0) unstable; urgency=low
 
   * Initial release.
