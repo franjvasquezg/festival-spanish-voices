@@ -1,0 +1,4 @@
+estudir:
+
+soporte a canaimitas las siguientes dependencias
+sox (>= 14.3.1-1), libsox1b (>= 14.3.1-1) | libsox2 (>= 14.4.0-3), libsox-fmt-base (>= 14.3.1-1), libsox-fmt-alsa (>= 14.3.1-1)
