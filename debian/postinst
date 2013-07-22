@@ -5,7 +5,7 @@
 # ARCHIVO: postinst
 # DESCRIPCIÓN: Configura el festival-spanish-voices para incluir divert.
 # COPYRIGHT:
-#  (C) 2011 Francisco Javier Vásquez Guerrero <franjvasquezg@gmail.com>
+#  (C) 2013 Francisco Javier Vásquez Guerrero <franjvasquezg@gmail.com>
 # LICENCIA: GPL3
 # ==============================================================================
 #
@@ -16,37 +16,44 @@ PKG="festival-spanish-voices"
 
 set -e
 
-divert_festival() {
+case ${1} in
+
+	configure)
+	;;
 
 
-       	dpkg-divert --package ${PKG} --add --divert $1 $2
-	dpkg-divert --package  ${PKG} --list
+	divert_festival() {
+
+
+       		dpkg-divert --package ${PKG} --add --divert $1 $2
+		dpkg-divert --package  ${PKG} --list
 	
 
-}
+	}	
 
-divert_speek() {
-
-
-        dpkg-divert --package ${PKG} --add --divert $1 $2
-        dpkg-divert --package  ${PKG} --list
+	divert_speek() {
 
 
-}
+        	dpkg-divert --package ${PKG} --add --divert $1 $2
+        	dpkg-divert --package  ${PKG} --list
 
-ln -s /lib/systemd/system/festival.service /etc/systemd/system/festival-canaima.service
+
+	}
+
+	ln -s /lib/systemd/system/festival.service /etc/systemd/system/festival-canaima.service
 
 # Divert the following files if no diversion exists already
 # It is currentliy used to prevent the files collision between bash and
 # dash: they both provide the files in the package.
 
-divert_festival /usr/share/festival/voices/spanish/JuntaDeAndalucia_es_sf_diphone/config/festival.scm.canaima /etc/festival.scm 
+	divert_festival /usr/share/festival/voices/spanish/JuntaDeAndalucia_es_sf_diphone/config/festival.scm.canaima /etc/festival.scm 
 
-divert_speek /usr/share/festival/voices/spanish/JuntaDeAndalucia_es_sf_diphone/config/speech-dispatcher.canaima /etc/default/speech-dispatcher
+	divert_speek /usr/share/festival/voices/spanish/JuntaDeAndalucia_es_sf_diphone/config/speech-dispatcher.canaima /etc/default/speech-dispatcher
 
 
-update-alternatives --install /etc/speech-dispatcher/speechd.conf speech-dispatcher /usr/share/festival/voices/spanish/JuntaDeAndalucia_es_sf_diphone/spdconf/speechd.conf 20
+	update-alternatives --install /etc/speech-dispatcher/speechd.conf speech-dispatcher /usr/share/festival/voices/spanish/JuntaDeAndalucia_es_sf_diphone/spdconf/speechd.conf 20
 
+esac
 
 #DEBHELPER#
 

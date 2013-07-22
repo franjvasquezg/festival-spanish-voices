@@ -15,10 +15,6 @@
 
 # This has to be exported to make some magic below work.
 
-%:
-	dh ${@}
-
-
 export DH_OPTIONS
 
 
@@ -72,6 +68,8 @@ install-indep:
 	dh_testroot
 	dh_clean -k -i 
 	dh_installdirs -i
+
+	$(MAKE) DESTDIR=$(CURDIR)/debian/festival-spanish-voices
 
 	# Add here commands to install the indep part of the package into
 	# debian/<package>-doc.
