@@ -40,7 +40,7 @@ rm -rf /usr/share/festival/voices/spanish/*
 
 #Borramos el ALTERNATIVE
 
-update-alternatives --remove speech-dispatcher /etc/speech-dispatcherusr/speechd.conf
+update-alternatives --remove speech-dispatcher /etc/speech-dispatcher/speechd.conf
 
 
 #DEBHELPER#

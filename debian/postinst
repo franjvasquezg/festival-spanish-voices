@@ -45,7 +45,7 @@ divert_festival /usr/share/festival/voices/spanish/JuntaDeAndalucia_es_sf_diphon
 divert_speek /usr/share/festival/voices/spanish/JuntaDeAndalucia_es_sf_diphone/config/speech-dispatcher.canaima /etc/default/speech-dispatcher
 
 
-update-alternatives --install /etc/speech-dispatcherusr/speechd.conf speech-dispatcher /usr/share/festival/voices/spanish/JuntaDeAndalucia_es_sf_diphone/spdconf/speechd.conf 20
+update-alternatives --install /etc/speech-dispatcher/speechd.conf speech-dispatcher /usr/share/festival/voices/spanish/JuntaDeAndalucia_es_sf_diphone/spdconf/speechd.conf 20
 
 #DEBHELPER#
 
