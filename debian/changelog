@@ -1,3 +1,12 @@
+festival-spanish-voices (1.0.0Canaima1+4) unstable; urgency=low
+
+  [ Francisco Javier Vásquez Guerrero ]
+  * [5835240] agregamos archivo Makefile
+
+  [ francisco vasquez ]
+
+ -- Francisco Javier Vásquez Guerrero <franjvasquezg@gmail.com>  Mon, 22 Jul 2013 16:46:47 -0430
+
 festival-spanish-voices (1.0.0Canaima1+3) unstable; urgency=low
 
   [ Francisco Javier Vásquez Guerrero ]
