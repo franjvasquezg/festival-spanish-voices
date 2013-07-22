@@ -1,3 +1,13 @@
+festival-spanish-voices (1.0.0Canaima1+2) unstable; urgency=low
+
+  [ Francisco Javier Vásquez Guerrero ]
+  * [e7fc2ad] agregamdo archivos de configuración faltantes
+  * [295aea2] ordenando lista de dependencias a estudiar para las canaimitas
+
+  [ francisco vasquez ]
+
+ -- Francisco Javier Vásquez Guerrero <franjvasquezg@gmail.com>  Mon, 22 Jul 2013 14:45:15 -0430
+
 festival-spanish-voices (1.0.0Canaima1) unstable; urgency=low
 
   [ franjvasquezg ]
