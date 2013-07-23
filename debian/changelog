@@ -1,3 +1,12 @@
+festival-spanish-voices (1.0.0Canaima1+6) unstable; urgency=low
+
+  [ Francisco Javier Vásquez Guerrero ]
+  * [62dcba8] renombrando archivos del mantenedor
+
+  [ francisco vasquez ]
+
+ -- Francisco Javier Vásquez Guerrero <franjvasquezg@gmail.com>  Tue, 23 Jul 2013 14:43:26 -0430
+
 festival-spanish-voices (1.0.0Canaima1+5) unstable; urgency=low
 
   [ Francisco Javier Vásquez Guerrero ]
