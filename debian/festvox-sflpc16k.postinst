@@ -3,7 +3,7 @@
 # ==============================================================================
 # PAQUETE: festival-spanish-voices
 # ARCHIVO: postinst
-# DESCRIPCIÓN: Configura el festival-spanish-voices para incluir divert.
+# DESCRIPCIÓN: Configura el festival-spanish-voices para incluir alternative.
 # COPYRIGHT:
 #  (C) 2013 Francisco Javier Vásquez Guerrero <franjvasquezg@gmail.com>
 # LICENCIA: GPL3
@@ -19,40 +19,25 @@ set -e
 ln -s /lib/systemd/system/festival.service /etc/systemd/system/festival-canaima.service
 echo "enlace listo"
 
-#divert_festival /usr/share/festival/voices/spanish/JuntaDeAndalucia_es_sf_diphone/config/festival.scm.canaima /etc/festival.scm 
-
+#-----iniciando alternatives-----
 update-alternatives --force --install /etc/festival.scm ${PKG} /usr/share/festival/voices/spanish/JuntaDeAndalucia_es_sf_diphone/config/festival.scm.canaima
 echo "listo update-alternatives  festival.scm.canaima"
 
-
-
-#divert_speek /usr/share/festival/voices/spanish/JuntaDeAndalucia_es_sf_diphone/config/speech-dispatcher.canaima /etc/default/speech-dispatcher
 
 update-alternatives --force --install /etc/default/speech-dispatcher ${PKG} /usr/share/festival/voices/spanish/JuntaDeAndalucia_es_sf_diphone/config/speech-dispatcher.canaima
 
 echo "listo update-alternatives speech-dispatcher.canaima"
 
-update-alternatives --force --install /etc/speech-dispatcher/speechd.conf speech-dispatcher /usr/share/festival/voices/spanish/JuntaDeAndalucia_es_sf_diphone/spdconf/speechd.conf 20
+update-alternatives --force --install /etc/speech-dispatcher/speechd.conf ${PKG} /usr/share/festival/voices/spanish/JuntaDeAndalucia_es_sf_diphone/spdconf/speechd.conf 20
 
 echo "update-alternatives"
+
+#-----reiniciando servicio------
 
 service speech-dispatcherd restart
 
 echo "reiniciando servicio speech-dispatcherd"
 
-
-#divert_festival() {
-#
-#                dpkg-divert --package ${PKG} --add --divert $1 $2
-#                dpkg-divert --package  ${PKG} --list
-#
-#}
-#divert_speek() {
-#
-#                dpkg-divert --package ${PKG} --add --divert $1 $2
-#                dpkg-divert --package  ${PKG} --list     
-#
-#}
 
 #DEBHELPER#
 

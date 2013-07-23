@@ -12,25 +12,9 @@
 # Este programa es software libre. Puede redistribuirlo y/o modificarlo bajo los
 # términos de la Licencia Pública General de GNU (versión 3).
 
-PKG="festival-spanish-voices"
+PKG="festvox-sflpc16k"
 
 set -e
-
-divertrm() {
-
-	
-       	dpkg-divert --package ${PKG} --remove --divert $1 $2
-	echo "removido divert de ${PKG}"
-	
-
-}
-
-# Divert the following files if no diversion exists already
-# It is currentliy used to prevent the files collision between bash and
-# dash: they both provide the files in the package.
-
-divertrm /usr/share/festival-spanish-voices/festival.scm.canaima \
-	 /etc/festival.scm 
 
 
 rm /etc/systemd/system/festival-canaima.service
@@ -40,8 +24,9 @@ rm -rf /usr/share/festival/voices/spanish/*
 
 #Borramos el ALTERNATIVE
 
-update-alternatives --remove speech-dispatcher /etc/speech-dispatcher/speechd.conf
-
+update-alternatives --remove festvox-sflpc16k /etc/speech-dispatcher/speechd.conf
+update-alternatives --remove festvox-sflpc16k /etc/festival.scm 
+update-alternatives --remove festvox-sflpc16k /etc/default/speech-dispatcher
 
 #DEBHELPER#
 
