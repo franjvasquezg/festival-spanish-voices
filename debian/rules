@@ -69,7 +69,7 @@ install-indep:
 	dh_clean -k -i 
 	dh_installdirs -i
 
-	$(MAKE) DESTDIR=$(CURDIR)/debian/festival-spanish-voices
+	#$(MAKE) DESTDIR=$(CURDIR)/debian/ftvox-sflpc16k configure
 
 	# Add here commands to install the indep part of the package into
 	# debian/<package>-doc.

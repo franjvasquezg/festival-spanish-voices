@@ -12,7 +12,7 @@ build:
 
 install:
 	# Installing shared data
-	
+	echo "instalando voz de silvia"	
 uninstall:
 
 	# Uninstalling shared data
