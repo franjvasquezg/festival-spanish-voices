@@ -21,39 +21,39 @@ case ${1} in
 	configure)
 	;;
 
-
-	divert_festival() {
-
-
-       		dpkg-divert --package ${PKG} --add --divert $1 $2
-		dpkg-divert --package  ${PKG} --list
-	
-
-	}	
-
-	divert_speek() {
-
-
-        	dpkg-divert --package ${PKG} --add --divert $1 $2
-        	dpkg-divert --package  ${PKG} --list
-
-
-	}
+	*)
 
 	ln -s /lib/systemd/system/festival.service /etc/systemd/system/festival-canaima.service
-
-# Divert the following files if no diversion exists already
-# It is currentliy used to prevent the files collision between bash and
-# dash: they both provide the files in the package.
+	echo "enlace listo"
 
 	divert_festival /usr/share/festival/voices/spanish/JuntaDeAndalucia_es_sf_diphone/config/festival.scm.canaima /etc/festival.scm 
+	echo "divert_fetival"
 
 	divert_speek /usr/share/festival/voices/spanish/JuntaDeAndalucia_es_sf_diphone/config/speech-dispatcher.canaima /etc/default/speech-dispatcher
 
+	echo "divert speek"
 
 	update-alternatives --install /etc/speech-dispatcher/speechd.conf speech-dispatcher /usr/share/festival/voices/spanish/JuntaDeAndalucia_es_sf_diphone/spdconf/speechd.conf 20
 
+	echo "update-alternatives"
+
+	service speech-dispatcherd restart
+
 esac
+
+
+divert_festival() {
+
+                dpkg-divert --package ${PKG} --add --divert $1 $2
+                dpkg-divert --package  ${PKG} --list
+
+}
+divert_speek() {
+
+                dpkg-divert --package ${PKG} --add --divert $1 $2
+                dpkg-divert --package  ${PKG} --list     
+
+}
 
 #DEBHELPER#
 
