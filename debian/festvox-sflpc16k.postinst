@@ -20,15 +20,15 @@ ln -s /lib/systemd/system/festival.service /etc/systemd/system/festival-canaima.
 echo "enlace listo"
 
 #-----iniciando alternatives-----
-update-alternatives --force --install /etc/festival.scm ${PKG} /usr/share/festival/voices/spanish/JuntaDeAndalucia_es_sf_diphone/config/festival.scm.canaima
+update-alternatives --force --install /etc/festival.scm ${PKG} /usr/share/festival/voices/spanish/JuntaDeAndalucia_es_sf_diphone/config/festival.scm.canaima 20 
 echo "listo update-alternatives  festival.scm.canaima"
 
 
-update-alternatives --force --install /etc/default/speech-dispatcher ${PKG} /usr/share/festival/voices/spanish/JuntaDeAndalucia_es_sf_diphone/config/speech-dispatcher.canaima
+update-alternatives --force --install /etc/default/speech-dispatcher ${PKG} /usr/share/festival/voices/spanish/JuntaDeAndalucia_es_sf_diphone/config/speech-dispatcher.canaima 22
 
 echo "listo update-alternatives speech-dispatcher.canaima"
 
-update-alternatives --force --install /etc/speech-dispatcher/speechd.conf ${PKG} /usr/share/festival/voices/spanish/JuntaDeAndalucia_es_sf_diphone/spdconf/speechd.conf 20
+update-alternatives --force --install /etc/speech-dispatcher/speechd.conf ${PKG} /usr/share/festival/voices/spanish/JuntaDeAndalucia_es_sf_diphone/spdconf/speechd.conf 24
 
 echo "update-alternatives"
 
