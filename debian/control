@@ -8,7 +8,7 @@ Standards-Version: 3.9.4
 
 Package: festvox-palpc16k
 Architecture: all
-Depends: festival (>= 1.4.3-9)
+Depends: festival (>= 1.4.3-9), festival-freebsoft-utils (>= 0.10-3)
 Description: Male Spanish voice for Festival
  This is a diphone-based male Spanish voice for the Festival speech
  synthesis system. These original audio files were recorded by a professional
@@ -27,7 +27,7 @@ Description: Male Spanish voice for Festival
 
 Package: festvox-sflpc16k
 Architecture: all
-Depends: festival (>= 1.4.3-9)
+Depends: festival (>= 1.4.3-9), festival-freebsoft-utils (>= 0.10-3)
 Description: Female spanish voice for Festival
  This is a diphone-based male Spanish voice for the Festival speech
  synthesis system. These original audio files were recorded by a professional
