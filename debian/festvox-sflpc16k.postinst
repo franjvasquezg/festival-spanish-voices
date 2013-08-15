@@ -12,32 +12,29 @@
 # Este programa es software libre. Puede redistribuirlo y/o modificarlo bajo los
 # términos de la Licencia Pública General de GNU (versión 3).
 
-PKG="festvox-sflpc16k"
-
 set -e
 
 ln -s /lib/systemd/system/festival.service /etc/systemd/system/festival-canaima.service
 echo "enlace listo"
 
 #-----iniciando alternatives-----
-update-alternatives --force --install /etc/festival.scm ${PKG} /usr/share/festival/voices/spanish/JuntaDeAndalucia_es_sf_diphone/config/festival.scm.canaima 20 
+update-alternatives --force --install /etc/festival.scm festival.scm /usr/share/festival/voices/spanish/JuntaDeAndalucia_es_sf_diphone/config/festival.scm.canaima 22
 echo "listo update-alternatives  festival.scm.canaima"
 
-
-update-alternatives --force --install /etc/default/speech-dispatcher ${PKG} /usr/share/festival/voices/spanish/JuntaDeAndalucia_es_sf_diphone/config/speech-dispatcher.canaima 22
+update-alternatives --force --install /etc/default/speech-dispatcher speech-dispatcher /usr/share/festival/voices/spanish/JuntaDeAndalucia_es_sf_diphone/config/speech-dispatcher.canaima 22
 
 echo "listo update-alternatives speech-dispatcher.canaima"
 
-update-alternatives --force --install /etc/speech-dispatcher/speechd.conf ${PKG} /usr/share/festival/voices/spanish/JuntaDeAndalucia_es_sf_diphone/spdconf/speechd.conf 24
+update-alternatives --force --install /etc/speech-dispatcher/speechd.conf speechd.conf /usr/share/festival/voices/spanish/JuntaDeAndalucia_es_sf_diphone/config/speechd.conf 22
 
 echo "update-alternatives"
 
 #-----reiniciando servicio------
-
-service speech-dispatcherd restart
-
-echo "reiniciando servicio speech-dispatcherd"
-
+echo "borrando cualquier configuracion local obsoleta de speech-dispatcher"
+rm -rf $(pwd)/.speech-dispatcher
+echo "reiniciando servicio speech-dispatcher"
+service speech-dispatcher restart
+echo "configuración finalizada"
 
 #DEBHELPER#
 

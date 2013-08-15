@@ -2,31 +2,28 @@
 #
 # ==============================================================================
 # PAQUETE: festival-spanish-voices
-# ARCHIVO: preinst
-# DESCRIPCIÓN: Configura el festival-spanish-voices para incluir divert.
+# ARCHIVO: postinst
+# DESCRIPCIÓN: Configura el festival-spanish-voices para incluir alternative.
 # COPYRIGHT:
-#  (C) 2011 Francisco Javier Vásquez Guerrero <franjvasquezg@gmail.com>
+#  (C) 2013 Francisco Javier Vásquez Guerrero <franjvasquezg@gmail.com>
 # LICENCIA: GPL3
 # ==============================================================================
 #
 # Este programa es software libre. Puede redistribuirlo y/o modificarlo bajo los
 # términos de la Licencia Pública General de GNU (versión 3).
 
-PKG="festvox-sflpc16k"
-
 set -e
-
 
 rm /etc/systemd/system/festival-canaima.service
 rm /lib/systemd/system/festival.service
 rm /usr/local/bin/festival.sh
 rm -rf /usr/share/festival/voices/spanish/*
 
-#Borramos el ALTERNATIVE
+#Borramos los ALTERNATIVE
 
-update-alternatives --remove festvox-sflpc16k /etc/speech-dispatcher/speechd.conf
-update-alternatives --remove festvox-sflpc16k /etc/festival.scm 
-update-alternatives --remove festvox-sflpc16k /etc/default/speech-dispatcher
+update-alternatives --remove speechd.conf /etc/speech-dispatcher/speechd.conf
+update-alternatives --remove festival.scm /etc/festival.scm 
+update-alternatives --remove speech-dispatcher /etc/default/speech-dispatcher
 
 #DEBHELPER#
 
