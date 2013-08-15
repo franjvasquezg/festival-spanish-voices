@@ -1,3 +1,19 @@
+festival-spanish-voices (1.0.0Canaima1+8) unstable; urgency=low
+
+  [ Francisco Javier Vásquez Guerrero ]
+  * [5c145fc] modificado festvox-sflpc16k.postinst y festvox-sflpc16k.postrm
+  * [e481a84] cambios en debian/festvox-sflpc16k.postinst
+
+  [ Jose Guerrero ]
+  * [6999b51] - Agregando festival-freebsoft-utils como dependencia de las voces. - Comentando la linea relacionada con el acceso al servidor dado que no es necesario en debian Wheezy. Falta realizar pruebas en debian Squeeze. - Corrección ortografica menor.
+  * [c620a55] - Agregando archivos festvox-sflpc16k.init y festvox-sflpc16k.default para iniciar festival como servicio durante el arranque del sistema. - Activando dh_installinit para automatizar configuración e instalación de festival como servicio.
+  * [46a7d98] - Corrigiendo alternatives. - Reubicando el archivo speechd.conf para hacerlo consistente con la ubicación de los otros archivos de configuración. - Actualización de la descripción.
+  * [c372fb5] - Borrando archivos innecesarios y referencias a los mismos.
+
+  [ Francisco Guerrero ]
+
+ -- Francisco Guerrero <fran@frandesk>  Thu, 15 Aug 2013 09:58:49 -0430
+
 festival-spanish-voices (1.0.0Canaima1+7) unstable; urgency=low
 
   [ Francisco Javier Vásquez Guerrero ]
