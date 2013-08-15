@@ -14,9 +14,6 @@
 
 set -e
 
-rm /etc/systemd/system/festival-canaima.service
-rm /lib/systemd/system/festival.service
-rm /usr/local/bin/festival.sh
 rm -rf /usr/share/festival/voices/spanish/*
 
 #Borramos los ALTERNATIVE
